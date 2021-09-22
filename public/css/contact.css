@@ -1,0 +1,9 @@
+.message {
+  text-align: center;
+  font-family: fantasy;
+  font-size: 18px;
+  color: var(--color-primary);
+  border-top: solid 1px var(--color-primary);
+  padding: 20px 0;
+  background-color: var(--color-lightblue);
+}

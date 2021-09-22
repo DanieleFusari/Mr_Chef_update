@@ -1,0 +1,83 @@
+
+section {
+  margin: 50px;
+}
+
+.limit .header {
+  text-decoration: underline;
+
+}
+
+.limit .header,
+.messages .header,
+.enquires .header {
+  padding: 20px 0;
+  font-family: sans-serif;
+}
+
+.limitform {
+  padding: 25px 0;
+}
+
+.limitform label[for="number"],
+.limitform input {
+  margin-right: 25px;
+  padding-right: 10px;
+  font-size: 18px;
+  color: var(--color-primary);
+  text-align: center;
+  width: 80px;
+  border-radius: 10%;
+}
+
+
+table {
+  width: 100%;
+}
+
+.messages table,
+.enquires table {
+  margin: 10px auto;
+  width: 95%;
+}
+
+.messages th,
+.enquires th {
+  color: #000;
+  background-color: #6699cc;
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+  border: solid .5px gray;
+}
+
+
+.messages tr,
+.messages td,
+.enquires td,
+.enquires tr {
+  border: solid .5px gray;
+  text-align: center;
+  padding: 10px;
+  font-size: 13px;
+}
+
+td.alightLeft {
+  text-align: left;
+  vertical-align: top;
+  width: 55%;
+}
+
+.messages tr:nth-child(odd),
+.enquires tr:nth-child(odd) {
+  background-color:  #fff5e6;
+}
+.messages tr:nth-child(even),
+.enquires tr:nth-child(even) {
+  background-color: #ffebcc  ;
+}
+
+.messages tr:hover,
+.enquires tr:hover {
+  background-color: #f0f5f5;
+}

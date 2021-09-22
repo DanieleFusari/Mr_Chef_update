@@ -1,0 +1,23 @@
+Options -Indexes
+DirectoryIndex /operations/load.php
+
+RewriteEngine on
+
+RewriteBase /
+#Push every request to index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ operations/load.php [QSA]
+
+
+<FilesMatch "\.(db)$">
+Order allow,deny
+Deny from all
+</FilesMatch>
+
+
+RedirectMatch 403 ^/vendor/?$
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [NC,L]

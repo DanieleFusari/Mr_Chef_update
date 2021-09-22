@@ -1,0 +1,11 @@
+# Logs and databases #
+*.log
+*.sql
+*.sqlite
+*.db
+.env
+vendor/
+test*
+.env
+public/compilation_cache
+.DS_Store

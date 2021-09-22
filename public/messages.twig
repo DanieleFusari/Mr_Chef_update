@@ -1,0 +1,83 @@
+{% extends "templates/layout.twig" %}
+
+{% block css %}
+<link rel="stylesheet" href="public/css/0247645336407753361522emails.css">
+{% endblock %}
+
+{% block main %}
+
+
+<section>
+  <div class="limit">
+    <h3 class="header">Select Number of Messages / Enquires </h3>
+    <form class="limitform" action="" method="get">
+      <label for="number">Records</label>
+      <input id="number" type="number" name="limit" value="{{ limit }}">
+      <input type="submit" value="Get">
+    </form>
+  </div> <!-- limit -->
+  <div class="messages">
+    <h2 class="header">Messages</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Mobile</th>
+          <th>Message</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for item in messages %}
+        <tr>
+          <td> {{ item['id'] }} </td>
+          <td> {{ item['name'] }}  </td>
+          <td> {{ item['email'] }} </td>
+          <td> {{ item['mobile'] }} </td>
+          <td class="alightLeft"> {{ item['message'] }} </td>
+          <td> {{ item['reg_date'] }} </td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>  <!-- messages -->
+
+<hr>
+
+  <div class="enquires">
+    <h2 class="header">Enquires</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Event Date</th>
+          <th>Mobile</th>
+          <th>Menu</th>
+          <th>Email</th>
+          <th>Name</th>
+          <th>Guest</th>
+          <th>Date Recived</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for item in enquires %}
+        <tr>
+          <td> {{ item['id'] }} </td>
+          <td> {{ item['event_date'] }}  </td>
+          <td> {{ item['mobile'] }} </td>
+          <td> {{ item['menu'] }} </td>
+          <td> {{ item['email'] }} </td>
+          <td> {{ item['name'] }} </td>
+          <td> {{ item['guests'] }} </td>
+          <td> {{ item['reg_date'] }} </td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>  <!-- messages -->
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,84 @@
+{% extends "layout.twig" %}
+
+{% block css %}
+<link rel="stylesheet" href="public/css/menu.css">
+{% endblock %}
+
+
+{% block main %}
+    <section class="page-heading">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Our Menus</h1>
+                    <p>Buffets for all your special occasions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="dropdown">
+      <select id="dropdown_menus" onchange="change_menu()" name="menus">
+          <option value="/">--- Select a menu ---</option>
+          <option {% if (menu['link'] == 'barbecue') %} selected {% endif %} value="barbecue">Barbecue</option>
+          <option {% if (menu['link'] == 'pig_roast') %} selected {% endif %} value="pig_roast">Pig Roast</option>
+          <option {% if (menu['link'] == 'carved_buffet') %} selected {% endif %}  value="carved_buffet">Carved Buffet</option>
+          <option {% if (menu['link'] == 'hot_food_menu') %} selected {% endif %}  value="hot_food_menu">Hot Food</option>
+          <option {% if (menu['link'] == 'portioned_finger_buffet') %} selected {% endif %}  value="portioned_finger_buffet">Portioned Finger Buffet</option>
+          <option {% if (menu['link'] == 'deluxe_portioned_finger_buffet') %} selected {% endif %}  value="deluxe_portioned_finger_buffet">Deluxe Portioned Finger Buffet</option>
+          <option {% if (menu['link'] == 'jacket_potato') %} selected {% endif %}  value="jacket_potato">Jacket Potato</option>
+          <option {% if (menu['link'] == 'packed_lunches') %} selected {% endif %}  value="packed_lunches">Pack Lunches</option>
+      </select>
+    </div>
+
+{% if (menu) %}
+<section class="breakfast-menu menu">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="breakfast-menu-content">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="left-image">
+                                <a target="_blank" href="public/menus/{{menu['link']}}.pdf" PDF >
+                                  <img src="public/menus/{{ menu['link'] }}.jpg" alt="{{ menu['menu_name'] }}">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <h2>{{ menu['menu_name'] }}</h2>
+                            <div id="extrasScrole" class="owl-carousel owl-theme">
+
+                              {% for options in menu['options'] %}
+                                <div class="item col-md-12">
+                                    <div class="food-item">
+                                        <img src="/public/img/{{ options['img'] }} " alt="img">
+                                        <div class="price"> <a href="/info?tc#prices">*</a> {{ options['price'] }}</div>
+                                        <div class="text-content">
+                                            <h4>{{ options['h4'] }}</h4>
+                                            <p>{{ options['p'] }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                              {% endfor %}
+
+                            </div>
+                            <a  class="link" href="public/menus/{{menu['link']}}.pdf" download > Download the {{ menu['menu_name'] }} Menu here</a>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </div>
+</section>
+
+{% else %}
+  <section>
+    <div class="center">
+      <img class="default_img" src="public/menus/default.jpg" alt="default menu">
+    </div>
+  </section>
+
+{% endif %}
+
+{% endblock %}

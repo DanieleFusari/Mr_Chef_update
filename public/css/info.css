@@ -1,0 +1,34 @@
+
+
+main {
+  background: #fff;
+  padding: 50px;
+  text-align: left;
+}
+
+.y25 {
+  width: 30%;
+  margin-top: 30px;
+  float: right;
+}
+
+.about_us {
+  padding: 1% 3%;
+}
+
+h1 {
+  font-size: 50px;
+  font-family: var(--font-normal);
+  color: var(--color-primary);
+  margin: 3% 0;
+}
+
+.tc h2 {
+  color: #000;
+  margin: 75px 0 30px;
+  font-size: 30px;
+}
+
+.about_us p {
+  color: #000;
+}

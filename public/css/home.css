@@ -1,0 +1,58 @@
+.message {
+  text-align: center;
+  font-family: fantasy;
+  font-size: 18px;
+  color: var(--color-primary);
+  border-top: solid 1px var(--color-primary);
+  padding: 20px 0;
+  background-color: var(--color-lightblue);
+}
+.cook-content h6 a {
+  color: var(--color-primary);
+}
+
+.cook-content .contact-content {
+  background-color: #fff;
+}
+
+
+/* ***************** services ***************** */
+
+.services .services-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.col-md-3.col-sm-6.col-xs-12 {
+  margin-bottom:  50px;
+}
+
+.services .services-flex img {
+  border-radius: 100%;
+}
+
+
+
+/* book-table */
+
+#book-table .right-info {
+  height: 360px;
+  border: solid 2px var(--color-lightblue);
+}
+
+#form-submit .row {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 220px;
+  margin-bottom: 10px;
+}
+
+.right-info select,
+.right-info input {
+  margin-bottom: 10px;
+  margin-top: 0;
+	height: 50px;
+}

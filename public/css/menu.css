@@ -1,0 +1,40 @@
+section.menu {
+  height: 600px;
+  margin: 20px auto;
+}
+
+#dropdown {
+  display: flex;
+  flex-direction: row;
+}
+
+#dropdown_menus {
+  margin: 30px auto;
+  font-size: 20px;
+}
+
+.link {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: underline;
+  font-size: 15px;
+}
+
+
+
+.center {
+  display: flex;
+  flex-direction: row;
+}
+
+.default_img {
+  width: 55%;
+  margin: auto;
+}
+
+.left {
+  text-align: right;
+  margin-top: 10px;
+  font-size: 8px;
+}

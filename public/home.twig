@@ -1,0 +1,348 @@
+{% extends "templates/layout.twig" %}
+
+{% block css %}
+<link rel="stylesheet" href="public/css/home.css">
+{% endblock %}
+
+{% block main %}
+{% if (message) %}
+  <p class="message">Your Message has been sent.</p>
+{% endif %}
+
+    <section class="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <h4>The Professional Caterers With over 25 years </h4>
+                    <h2>Mr.Chef </br> Caterering</h2>
+                    <p>Here at Mr.Chef catering we pride ourselves on our first class reputation as a provider of home-cooked food with an excellent service.</p>
+                    <div class="primary-button">
+                        <a href="#" class="scroll-link" data-id="book-table">Book an Event</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="cook-delecious">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-md-offset-1">
+                    <div class="first-image">
+                        <img src="/public/img/cook_01.jpg" alt="food">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="cook-content">
+                        <h4>You can call us on:</h4>
+                        <div class="contact-content">
+                            <h6><a href="tel:02476453364">02476453364</a> </h6>
+                            <h6><a href="tel:07753361522">07753361522</a></h6>
+                        </div>
+                        <span>or</span>
+                        <div class="primary-white-button">
+                            <a href="#" class="scroll-link" data-id="book-table">Request Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="second-image">
+                        <img src="/public/img/cook_02.jpg" alt="food">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="services">
+        <div class="container">
+            <div class="row  services-flex">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-item">
+                        <a href="events#weddings">
+                        <img src="/public/img/wedding/selective_focus.jpg" alt="Wedding">
+                        <h4>Weddings</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-item">
+                        <a href="events#business">
+                        <img src="/public/img/business/coffie_pen_pad.jpg" alt="business">
+                        <h4>Business</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-item">
+                        <a href="events#barbecue">
+                        <img src="/public/img/barbecue/burgers.jpg" alt="barbecue">
+                        <h4>Barbecue</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-item">
+                        <a href="events#special_occasion">
+                        <img src="/public/img/special/baby.jpg" alt="special">
+                        <h4>Special Occasion </h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-item">
+                        <a href="events#funerals">
+                        <img src="/public/img/funeral/coffin.jpg" alt="funeral">
+                        <h4>Funerals</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-item">
+                        <a href="events#packed_lunches">
+                        <img src="/public/img/packed_lunches/lunch_bags.jpg" alt="Party">
+                        <h4>Packed Lunches</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>  <!-- row -->
+        </div>   <!-- container -->
+    </section>
+
+
+
+    <section id="book-table">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="heading">
+                        <h2>Request more information on your Event Now</h2>
+                    </div>
+                </div>
+                <div class="col-md-4 col-md-offset-2 col-sm-12">
+                    <div class="left-image">
+                        <img src="/public/img/logos/Black_Red.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-24">
+                    <div class="right-info">
+                        <h4>You Event Information</h4>
+                        <form id="form-submit" action="home" method="post">
+                          <input hidden name="eventInfo" value="eventInfo">
+                            <div class="row">
+                                <div class="col-md-6">
+                                  <fieldset>
+                                      <input name="event_date" type="date" class="form-control" id="event_date" placeholder="Event Date" required="">
+                                  </fieldset>
+                                </div>
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <select class="col-md-6" required name='menu' onchange='this.form.()'>
+                                            <option value="">Select Menu</option>
+                                            <option value="Barbecue">Barbecue</option>
+                                            <option value="Pig Roast">Pig Roast</option>
+                                            <option value="Carved Buffet">Carved Buffet</option>
+                                            <option value="Hot Food">Hot Food</option>
+                                            <option value="portioned_finger_buffet">Portioned Finger Buffet.</option>
+                                            <option value="deluxe_portioned_finger_buffet">Deluxe Portioned Finger Buffet</option>
+                                            <option value="jacket_potato">Jacket Potato</option>
+                                            <option value="packed_lunches">Pack Lunches</option>
+
+                                        </select>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <input name="name" type="name" class="form-control" id="name" placeholder="Full name" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <input name="phone" type="tel" class="form-control" id="phone" placeholder="Phone number" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <input name="email" type="email" class="form-control" id="email" placeholder="E-mail" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <select required class="guest" name='guests' onchange='this.form.()'>
+                                            <option value="">How many Guestss?</option>
+                                            <option value="1-10 -Guest">1 - 10</option>
+                                            <option value="10+ -Guests">10+ </option>
+                                            <option value="20+ -Guests">20+</option>
+                                            <option value="30+ -Guests">30+</option>
+                                            <option value="40+ -Guests">40+</option>
+                                            <option value="50+ -Guests">50+</option>
+                                            <option value="60+ -Guests">60+</option>
+                                            <option value="70+ -Guests">70+</option>
+                                            <option value="80+ -Guests">80+</option>
+                                            <option value="90+ -Guests">90+</option>
+                                            <option value="100+ -Guests">100+</option>
+                                            <option value="200+ -Guests">200+</option>
+                                            <option value="300+ -Guests">300+</option>
+                                        </select>
+                                    </fieldset>
+                                </div>
+                            </div>
+                          <button type="submit" id="form-submit" class="btn">Request information</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- SERVICES -->
+
+    <section class="featured-food">
+        <div class="container">
+            <div class="row">
+                <div class="heading">
+                    <h2>Services</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="food-item">
+                        <h2>Free Delivery</h2>
+                        <img src="/public/img/services/free_delivery.jpg" alt="">
+                        <div class="price"> <a href="/info?tc#prices">*</a> FREE</div>
+                        <div class="text-content">
+                            <h4>We don’t charge for our delivery unlike lots of our competitors!</h4>
+                            <p>All our vehicles are bespoke purely for the food delivery service and are cleaned out daily after use. Hot food is transported in insulated food boxes to ensure food is piping hot on arrival. All food items transported in Mr chef delivery crates double wrapped and labelled to eliminate any allergenic contamination and keeping the food fresh. Specific dietary food is always kept separate and labelled individually to ensure all dietary needs are catered for. All chilled food is prepared then stored in the fridge until ready for delivery to maintain freshness.</p>
+                          </br>
+                            <h4>Pick-up and wash service.</h4>
+                            <p>let us clear up afterwards to save you the time and effort, with our pick up and wash service in house   We Deliver To...</p>
+                            <ul>
+                              <li>Leamington Spa</li>
+                              <li>Nuneaton</li>
+                              <li>Coventry</li>
+                              <li>Kenilworth</li>
+                              <li>North Warwick</li>
+                              <li>Warwick</li>
+                            </ul>
+                            </br>
+                            <p>Your location not listed? We operate in and around Warwick so give us a call to see if we can travel to you.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="food-item">
+                        <h2>Waiter Service</h2>
+                        <img src="/public/img/services/waitting_staff_coffie.jpg" alt="">
+                        <div class="price"><a href="/info?tc#prices">*</a> £100</div>
+                        <div class="text-content">
+                            <h4>A specialist team of waiting staff available for hire</h4>
+                            <p>Book sooner rather than later to avoid any disappointment!
+
+                            <h4>Waiting hire staff available</h4>
+                            <p>Get rid of the stress of finding waiting staff elsewhere, and use our highly qualified in house staff! No-one knows our products better, and can provide the service quite like us.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="food-item">
+                        <h2>Hire of Equipment</h2>
+                        <img src="/public/img/services/table_set.jpg" alt="">
+                        <div class="price"><a href="/info?tc#prices">*</a> £100</div>
+                        <div class="text-content">
+                          <h4>Here at Mr Chef Catering we can deliver or have equipment ready for collection on site.</h4>
+                          <ul>
+                            <li>Hog Roast machine</li>
+                            <li>Barbecue</li>
+                            <li>Crockery
+                              <ul class="circle">
+                                <li>Main course </li>
+                                <li>Dide plates</li>
+                                <li>Dessert bowls</li>
+                                <li>Soup bowls</li>
+                                <li>Cups & saucers</li>
+                                <li>etc.</li>
+                              </ul>
+                            </li>
+                            <li>Cutlery</li>
+                            <li>Water Jugs</li>
+                            <li>Glasses – Wine – champagne flutes – Water and juice glasses.</li>
+                            <li>Hot water still</li>
+                            <li>Soup terrine</li>
+                            <li>Chauffonts</li>
+                            <li>Food service flats, trays, and service utensils</li>
+                            <li>Tea and Coffee insulated jugs and dispensers</li>
+                            <li>Display baskets, large crockery plates and bowls</li>
+                            <li>+ many more</li>
+                          </ul>
+                          </br>
+                          <p>Please ask for any specific requirements to suit your event. If we do not stock any item, we can source and supply for you pretty much anything that you may require. When hiring any equipment please check our <a href="tc"> Full Terms and Conditions</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- <section class="our-blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="heading">
+                        <h2>Our blog post</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="blog-post">
+                        <img src="/public/img/blog_post_01.jpg" alt="">
+                        <div class="date">26 Oct 2020</div>
+                        <div class="right-content">
+                            <h4>Stumptown Tofu Schlitz</h4>
+                            <span>Branding / Admin</span>
+                            <p>Skateboard iceland twee tofu shaman crucifix vice before they sold out corn hole occupy drinking vinegar chambra meggings kale chips hexagon...</p>
+                            <div class="text-button">
+                                <a href="#">Continue Reading</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+
+    <section class="sign-up">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="heading">
+                        <h2>Signup for our newsletters</h2>
+                    </div>
+                </div>
+            </div>
+            <form id="contact" action="/home" method="post">
+              <input hidden name="newsLetter" value="newsLetter">
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-3">
+                        <fieldset>
+                            <input required name="email" type="text" class="form-control" id="email" placeholder="Enter your email here...">
+                        </fieldset>
+                    </div>
+                    <div class="col-md-2">
+                        <fieldset>
+                            <button type="submit" id="form-submit" class="btn">Send Message</button>
+                        </fieldset>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+{% endblock %}
